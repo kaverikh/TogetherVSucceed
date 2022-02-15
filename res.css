@@ -1,0 +1,12 @@
+body{
+position: relative;
+}
+
+.Button
+{
+    margin-left: 27em;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    color: #000;
+}
