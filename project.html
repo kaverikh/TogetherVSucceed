@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>second page</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+           
+
+        }
+        .navbar{
+            font-family: 'Roboto',sans-serif;
+        }
+        .navbar{
+            color: #f6f6f6;
+            /* position: sticky; */
+            top: 0;
+            background-color: #3b7478;
+        }
+        .navcontainer{
+            display: flex;
+            height: 100px;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            margin: auto;
+            transition: 0.15s;
+        }
+        ul{
+            text-align: right;
+            list-style: none;
+            cursor: pointer;
+        }
+        li:hover
+        {
+            color: yellow;
+        }
+        li{
+            display: inline-block;
+            padding: 12px;
+        }
+        .logo
+        {
+            font-size: 3em;
+            transition: 0.15s;
+        }
+        .active{
+            background: rgb(0,110,255) ;
+            border-radius: 8px;
+        }
+        .main{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+        .card
+        {
+            padding-bottom: 1150px;  
+            width: 250px;
+            height: 200px;
+            color: white;
+            margin-top: 5em;
+            margin: 3em;
+            border-radius: 15px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            flex-direction: centre;
+            padding: 0 1.5em;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .card::before, .card::after
+        {
+            content: '';
+            position: absolute;
+            background: #044b5083;
+            width: 100%;
+            height: 40%;
+            z-index: -10;
+            border-radius: 15px 15px 0 0 ;
+            transition: all .4s;
+        }
+        .card::before
+        {
+            top: 0;
+        }
+        .card:hover::before
+        {
+            transform: translateY(-20px);
+        }
+        .card::after
+        {
+            bottom: 10px;
+            height: 60%;
+            border-radius: 0 0 15px 15px;
+        }
+        .icon
+        {
+            width: 60px;
+            height: 60px;
+            background: white;
+            display: flex;
+            justify-content: centre;
+            align-items: centre;
+            /* border-radius: 50%; */
+        }
+        .card:hover .icon{
+            box-shadow: 0 0 10px black;
+        }
+        .icon i{
+            font-size: 1.5em;
+        }
+        .card p{
+            margin: 0.5em 0;
+            font-size: 0.8em;
+            display: none;
+            opacity: 0;
+            transition: all .8s;
+        }
+        .card:hover p{
+            display: block;
+            opacity: 1;
+        }
+        .card h4{
+            margin-top: 0.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navcontainer">
+            <p class="logo"><img src="image/WhatsApp Image 2022-01-25 at 14.12.56.jpeg" alt="" height="100px" width="250px"></p>
+            <ul>
+                <li>Home</li>
+                <li>Review</li>
+                <li class="active">Login</li>
+                <!-- <li><img src="image/icon2.png" alt="" height="50px" width="50px"></li> -->
+            </ul>
+        </div>
+
+    </div>
+    <div class="main">
+        <table>
+            <tr>
+                <td>
+                    <div class="card">
+                        <div class="icon">
+                            <img src="image/view.png" alt="" color="white">
+                        </div>
+                        <h4>VIEW EXPERIENCE</h4>
+                        <p>To view any interview experience please click on the below button <br>
+                            <select name="experiences" id="experiences">
+                                <option value="Company wise">Company Wise</option>
+                                <option value="College Wise">College Wise</option>
+                                <option value="View All">View All</option>
+                              </select>
+                        </p>
+                </td>
+                <td colspan="2" align="center">
+                    <div class="card">
+                        <div class="icon">
+                            <img src="image/add.png"  alt="">
+                        </div>
+                        <h4>ADD EXPERIENCE</h4>
+                        <p>Warmest congratulations on your achievement!! <br>
+                            Please click on the below button to add your experience. <br>
+                            <a href="#">Click</a> 
+                        </p>  
+                       
+                
+                
+                    </div>
+
+                </td>
+                <td>
+                    <div class="card">
+                        <div class="icon">
+                            <img src="image/resource.png" alt="">
+                        </div>
+                        <h4>RESOURCE</h4>
+                        <p>Click on the below button to view study material and prepare yourself to kill it at your upcoming interview <br>
+                            <a href="#">Click</a> 
+                        </p>
+                
+                
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    <div class="card">
+                        <div class="icon">
+                            <img src="image/paper.png" alt="">
+                        </div>
+                        <h4>PRACTICE PAPER</h4>
+                        <p>Got an interview? <br>
+                            Worry not!! <br>
+                            Click on the below button to view practice paper of the desired company <br>
+                            <a href="#">Click</a> 
+                        </p>
+                             
+                
+                    </div>
+
+                </td>
+                <td colspan="2" align="left" >
+                    <div class="card">
+                        <div class="icon">
+                            <img src="image/link.png" alt="">
+                        </div>
+                        <h4>OFF CAMPUS DRIVE</h4>
+                        <p>Hurray!! <br>
+                            Click on below button to view off campus recruitment drives <br>
+                            <a href="#">Click</a>  
+                        </p>  
+                            
+                
+                    </div>
+
+                </td>
+
+            </tr>
+            
+        </table>
+        
+    
+    
+        </div>
+       
+        
+        
+    
+
+    </div>
+    
+
+    
+</body>
+</html>
