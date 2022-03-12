@@ -1,0 +1,167 @@
+body{
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.top
+{
+  background-image: url(resour.jpeg);
+  height:max-content;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.page-title
+{
+  background: rgba(0,0,0 ,0.5);
+  text-align: center;
+  color:white;
+  padding: 50px;
+  font-variant:small-caps;
+  font-size: 100px;
+  font-family: fantasy;
+  letter-spacing: 20px;
+}
+
+.menu
+{
+  background: #3f7478;
+  text-align: center;
+}
+
+.profile{
+  height: 20px;
+  width: 20px;
+}
+
+.menu-list
+{
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.menu-list li{
+  font-size: 17px;
+  list-style: none;
+  display: inline-block;
+  padding: 25px 25px 26px 25px;
+}
+
+.a-menu
+{
+  text-decoration: none;
+  color: white;
+}
+
+.menu-list li:hover{
+  background: #c9ebee;
+  transform: scale(1.1);
+  color: #3f7478;
+}
+
+.container, .inner-container,.DSA1,.SUBJECTS{
+  margin: 50px 50px 50px 5%;
+  width: 90%;
+  text-align: center;
+}
+
+.categories{
+  width: max-content;
+  margin: 25px;
+  border: 1px solid #184d47;
+  border-radius: 0 0 50px 50px;
+  display: inline-block;
+}
+
+.categories:hover{
+  box-shadow: 0 0 10px 3px #184d47;
+}
+
+.items-img{
+  height: 250px;
+  width: 250px;
+  border-radius: 0 0 50px 50px;
+  padding: 10px;
+}
+
+.image-title{
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  color: black;
+}
+
+a{
+  text-decoration: none;
+}
+
+h3{
+  font-size: 20px;
+  font-style: italic;
+  color: #3f7478;
+  font-weight: lighter;
+}
+
+
+.title,.title2,.title3{
+  padding: 50px;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  color: white;
+  background: linear-gradient(120deg,#16817a 20%,#cee397 50%,#16817a 80%);
+  text-align: center;
+}
+
+.languages, .dsa, .sub{
+  display: inline-block;
+  margin: 20px;
+  max-width: 20%;
+  background: white;
+  position: relative;
+  display: inline-block;
+  padding: 15px;
+}
+
+select{
+  margin: 30px;
+  padding: 5px;
+    color: white;
+    /*font-size: 15px;*/
+    box-shadow: 0 0 20px rgba(0,0,0 ,0.2);
+    background-color: #16817a;
+    border-radius: 5px;
+}
+
+select option{
+  background-color:#cee397;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+#a1{
+  color: white;
+}
+
+
+#b1{
+  padding: 5px 5px;
+  border-radius: 5px;
+  background: #16817a;
+  margin: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px rgba(0,0,0 ,0.1);
+  transition-duration: 0.3s;
+  transition-property: transform;
+  
+}
+
+#b1:hover{
+  transform: scale(1.1);
+}
