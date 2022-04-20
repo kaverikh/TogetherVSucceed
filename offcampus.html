@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Off Campus</title>
+    <link rel="styles" type="image/x-icon" href="resources/images/logo.png">
+    <style>
+     * { 
+      margin : 0;
+      padding: 0;
+      box-sizing : border-box;
+      font-family : "Poppins", sans-serif;
+      overflow-x: hidden;
+    }
+    .top {
+    top:10px;
+    height: 20%;
+    width: 100%;
+
+    }
+    .page-title
+  {
+    position: absolute;
+            top: 50px;
+            left: 500px;
+            color: black;
+            font-size: 70px;
+            font-family: fantasy;
+            font-variant: small-caps;
+            letter-spacing: 20px;
+           
+           
+  }
+       
+      .container {
+        margin: 0px 50px 50px 10px;
+        width: 100%;
+        text-align: center;
+        background-color: #daf8fa7a;
+        /* border-radius: 50%; */
+      }
+ .menu
+{
+  background: #3f7478;
+  text-align: left;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.profile{
+  height: 20px;
+  width: 20px;
+}
+
+.menu-list
+{
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.menu-list li{
+  font-size: 17px;
+  list-style: none;
+  display: inline-block;
+  padding: 25px 25px 26px 25px;
+}
+
+.a-menu
+{
+  text-decoration: none;
+  color: white;
+}
+
+.menu-list li:hover{
+  background: #c9ebee;
+  transform: scaleY(1.1);
+  color: #3f7478;
+}
+        /* styling search bar */
+       
+        table{
+            border-spacing: 75px 20px;
+            color:black;
+            margin-top: 80px; 
+            margin-left: 5px;
+            font-size: 20px;
+            margin-left:100px;
+            height: 250px;
+
+        }
+        td{
+            text-align: center;
+            width: 250px;
+            height: 250px;
+            background-color: white;
+            border: 2px solid black; 
+            border-bottom-left-radius: 50px;
+            border-top-right-radius: 50px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        td:hover{
+            box-shadow: 0 0 10px 3px #0000008a;
+        }
+        a{
+            color: #3b7478;
+            font-weight: bolder;
+            font-size: 25px;
+            text-decoration: none;
+        }
+       a:hover{
+           font-size: 28px;
+           color: #1e5053;
+       }
+       h1{
+           /* color:white;
+        background: linear-gradient(120deg,#16817a 20%,#cee397 50%,#16817a 80%); */
+        font-weight: bolder;
+        /* font-style: italic; */
+        font-family:'Times New Roman', Times, serif;
+        font-size: 45px;
+        text-decoration: underline;
+        letter-spacing: 1px;
+       }
+       
+
+.footer-content{
+  position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #3c7d82;
+    height: auto;
+    width: 100%;
+
+    padding-top: 40px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    overflow-x: hidden;
+}
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+.footer-bottom{
+    background: #3c7d82;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+    overflow-x: hidden;
+}
+.footer-bottom p{
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: white;
+}
+.footer-bottom p a{
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+    </style>
+</head>
+<body>
+    <div class="top">
+        <img src="resources/images/offcampus.png" height="250px" width="100%"> 
+              <div class="page-title">Off Campus</div>
+    </div>
+     <!-- Navbar items -->
+     <div class="menu" id="sticky">
+        <ul class="menu-list">
+            <a href="./dashboard.html" class="a-menu"><li>Home</li></a>
+            <a href="./viewExperience.html" class="a-menu"><li>View Experience</li></a>
+            <a href="./addexperience.html" class="a-menu"><li>Add Experience</li></a>
+            <a href="./practicepaper.html" class="a-menu"><li>Practice Paper</li></a>
+            <a href="./resources.html" class="a-menu"><li>Resource</li></a>
+            <a id="logoutButton" class="a-menu" href="index.html"><li>Logout</li></a>
+            <a href="profile.html" class="a-menu"><li><img src="./resources/images/profile.png" class="profile"></li></a>
+         
+        </ul>
+    </div>
+    <div class="container">
+    <table >
+        <tr >
+            <th colspan="3"><h1 >Internship</h1></th>
+        </tr>
+        <tr>
+            <td >
+                Electronic Engineering Internship<br><br>
+                <a href="https://dare2compete.com/internship/electronic-engineering-internship-seagate-technology-279454?utm_source=Internships&utm_medium=D2C-Newsletters&utm_campaign=Eng-3rd-Year" target="_blank">Seagate Technology</a> 
+                
+            </td>
+            <td>
+                 Technical Support Internship<br><br>
+                <a href="https://dare2compete.com/internship/technical-support-internship-mcafee-278033?utm_source=Internships&utm_medium=D2C-Newsletters&utm_campaign=Eng-3rd-Year" target="_blank"> McAfee</a>
+               
+            </td>
+            <td>
+                IT Automation Engineering Internship<br><br>
+                <a href="https://dare2compete.com/internship/it-automation-engineering-internship-nvidia-276571?utm_source=Internships&utm_medium=D2C-Newsletters&utm_campaign=Eng-3rd-Year" target="_blank">NVIDIA</a>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Threat Intelligence Analytics Internship<br><br>
+                <a href="https://dare2compete.com/internship/threat-intelligence-analytics-internship-securonix-279318?utm_source=Internships&utm_medium=D2C-Newsletters&utm_campaign=Eng-3rd-Year" target="_blank">Securonix</a>
+                
+            </td>
+            <td>
+                Software Engineering Internship<br><br>
+                <a href="https://dare2compete.com/internship/software-engineering-internship-intel-279847?utm_source=Internships&utm_medium=D2C-Newsletters&utm_campaign=Eng-3rd-Year" target="_blank">Intel</a>
+                
+            </td>
+            <td>
+                Electromagnetic Simulation Internship<br><br>
+                <a href="https://dare2compete.com/internship/electromagnetic-simulation-internship-altair-279320?utm_source=Internships&utm_medium=D2C-Newsletters&utm_campaign=Eng-3rd-Year" target="_blank">Altair</a>
+               
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Design Engineering Internship<br><br>
+                <a href="https://dare2compete.com/internship/design-engineering-internship-micron-technology-279441?utm_source=Internships&utm_medium=D2C-Newsletters&utm_campaign=Eng-3rd-Year" target="_blank"> Micron Technology </a>
+            </td>
+            <td>
+                Circuit Designing Internship<br><br>
+                <a href="https://dare2compete.com/internship/circuit-designing-internship-ignitarium-technology-ltd-278039?utm_source=Internships&utm_medium=D2C-Newsletters&utm_campaign=Eng-3rd-Year" target="_blank"> Ignitarium Technology ltd </a>
+            </td>
+            <td>
+                HR Internship<br><br>
+                <a href="https://dare2compete.com/internship/hr-internship-meetri-280357">MeeTri Infotech Private Limited</a>
+            </td>
+        </tr>
+            <tr><th colspan="3"><h1>FTE</h1></th></tr>
+            <tr>
+                <td> 
+                    Web/Test Analyst<br><br>
+                    <a href="https://dare2compete.com/job/webtest-analyst-adobe-inc-280457" target="_blank"> Adobe Inc.</a>
+                </td>
+                <td>
+                    Web Production Analyst<br><br>
+                    <a href="https://dare2compete.com/job/web-production-analyst-dell-technologies-280453" target="_blank">Dell Technologies</a>
+                </td>
+                <td>
+                    Reporting Associate<br><br>
+                    <a href="https://dare2compete.com/job/reporting-associate-accenture-280450" target="_blank">Accenture</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Global Immigration Associate<br><br>
+                    <a href="https://dare2compete.com/job/global-immigration-associate-infosys-280425" target="_blank">Infosys</a>
+                </td>
+                <td>
+                    Area Credit Manager<br><br>
+                    <a href="https://dare2compete.com/job/area-credit-manager-tata-capital-280391" target="_blank">Tata Capital</a>
+                </td>
+                <td>
+                    Product Analyst (Process Engineer)<br><br>
+                    <a href="https://dare2compete.com/job/product-analyst-process-engineer-walmart-global-tech-india-280372" target="_blank">Walmart Global Tech India</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Benefits Ops Administrator<br><br>
+                    <a href="https://dare2compete.com/job/benefits-ops-administrator-wipro-technologies-280377" target="_blank">Wipro</a>
+                </td>
+                <td>
+                    Senior Business Analytics Associate<br><br>
+                    <a href="https://dare2compete.com/job/senior-business-analytics-associate-paytm-280380" target="_blank">Paytm</a>
+                </td>
+                <td>
+                    Performance Test Engineer<br><br>
+                    <a href="https://dare2compete.com/job/performance-test-engineer-barclays-280209" target="_blank">Barclays</a>
+                </td>
+            </tr>
+    </table>
+    </div>
+    <div class="footer-content">
+        <h3>Together✌️Succeed</h3>
+        <p>TogetherVSucceed is a website which will prepare you for your interviews and will definitely help you in achieving your goals.
+            All the best for your upcoming interviews!!</p>
+       
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy <a href="#">Together✌️Succeed</a>  </p>
+  
+    </div>
+    <script>
+        let logoutButton = document.getElementById("logoutButton");
+        logoutButton.addEventListener("click", function () {
+          localStorage.removeItem("userData");
+          localStorage.removeItem("displayExperience");
+        });
+      </script>
+</body>
+</html>

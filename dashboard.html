@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <!-- <link rel="stylesheet" href="./resources/stylesheets/home.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" type="image/x-icon" href="resources/images/logo.png">
+    <script src="./resources/script/isLoggedIn.js"></script>
+    <style>
+     body
+     {
+     margin: 0;
+     font-family: sans-serif;
+     overflow-x: hidden;
+     }
+.page-title
+  {
+            position: absolute;
+            top: 17px;
+            left: 70px;
+            color: #f2f2f2;
+            font-size: 70px;
+            font-family: fantasy;
+            font-variant: small-caps;
+            letter-spacing: 20px;
+           
+  }
+
+.menu
+{
+  background: #3f7478;
+  text-align: left;
+  font-weight: bolder;
+}
+
+.profile{
+  height: 20px;
+  width: 20px;
+}
+
+.menu-list
+{
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.menu-list li{
+  font-size: 18px;
+  list-style: none;
+  display: inline-block;
+  padding: 25px 25px 26px 25px;
+}
+
+.a-menu
+{
+  text-decoration: none;
+  color: white;
+}
+
+.menu-list li:hover{
+  background: #c9ebee;
+  transform: scaleY(1.1);
+  color: #3f7478;
+}
+.slide {
+  padding: 3px 210px;
+}
+
+.slide h1 {
+  font-size: 50px;
+  font-weight: bolder;
+  color: #1a374d;
+}
+
+.card1 {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 2px;
+  background: #b8e4f0;
+  margin-bottom: 40px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.card1 img {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.card1 h3 {
+  font-size: 30px;
+  font-weight: bolder;
+  color: #064663;
+  margin-left: 15px;
+  /* text-align: justify; */
+}
+
+.card1 p {
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.card1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.b1 {
+  position: relative;
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 40px;
+  background: #fff;
+  font-size: 18px;
+  margin: 10px 0;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: #6998ab;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition-duration: 0.3s;
+  transition-property: transform;
+  margin-left: 85px;
+  margin-top: 25px;
+}
+
+.b1:hover {
+  transform: scale(1.1);
+}
+
+.footer-content{
+  position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #3c7d82;
+    height: auto;
+    width: 100vw;
+
+    padding-top: 40px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+.footer-bottom{
+    background: #3c7d82;
+    width: 97vw;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.footer-bottom p{
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: white;
+}
+.footer-bottom p a{
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <img src="./resources/images/experience.jpg" height="250px" width="100%" > 
+            <div class="page-title">Our Experiences Bring Us Together</div>
+  </div>
+
+    <div class="menu" id="sticky">
+      <ul class="menu-list">
+          <!-- <a href="./dashboard.html" class="a-menu"><li>Home</li></a> -->
+          <a href="./viewExperience.html" class="a-menu"><li>View Experience</li></a>
+          <a href="./addexperience.html" class="a-menu"><li>Add Experience</li></a>
+          <a href="./practicepaper.html" class="a-menu"><li>Practice Paper</li></a>
+          <a href="./resources.html" class="a-menu"><li>Resource</li></a>
+          <a href="./offcampus.html" class="a-menu"><li>Off Campus</li></a>
+          <a href="index.html" class="a-menu" id="logoutButton"><li>Logout</li></a>
+          <a href="profile.html" class="a-menu"><li><img src="./resources/images/profile.png" class="profile"></li></a>
+       
+      </ul>
+  </div>
+
+    <div class="slide">
+      <span
+        ><h1>Welcome,</h1>
+        <h2 id="userName"></h2
+      ></span>
+      <h1>People grow through experiences</h1>
+      <div class="card1" data-aos="fade-up-left" data-aos-duration="500">
+        <img src="./resources/images/view.jpg" />
+        <div class="notes">
+          <h3>View experience</h3>
+          <p>
+            Why not take a look at your seniors' interview experience?<br />
+            To view any interview experience please click on the below button
+          </p>
+          <a href="./viewExperience.html" class="b1">Click Me!</a>
+        </div>
+      </div>
+
+      <div class="card1" data-aos="fade-up-right" data-aos-duration="500">
+        <img src="./resources/images/add.jpg" />
+        <div class="notes">
+          <h3>Add your interview experience</h3>
+          <p>
+            Warmest Congratulations on your achievement<br />
+            Your interview experience can be of great help to someone<br />
+            click on the below button to add your experience
+          </p>
+          <a href="./addexperience.html" class="b1">Click Me!</a>
+        </div>
+      </div>
+
+      <div class="card1" data-aos="fade-up-left" data-aos-duration="500">
+        <img src="./resources/images/practice.jpg" />
+        <div class="notes">
+          <h3>Practice Paper</h3>
+          <p>
+            Interview calling?<br />
+            Why not practice some questions<br />
+            click on the below button to view practice paper of the desired
+            company
+          </p>
+          <a href="/practicepaper.html" class="b1">Click Me!</a>
+        </div>
+      </div>
+
+      <div class="card1" data-aos="fade-up-right" data-aos-duration="500">
+        <img src="./resources/images/study.jpg" />
+        <div class="notes">
+          <h3>Resources</h3>
+          <p>
+            click on the below button to view study material and prepare
+            yourself to kill it at your upcoming interview
+          </p>
+          <a href="./resources.html" class="b1">Click Me!</a>
+        </div>
+      </div>
+
+      <div class="card1" data-aos="fade-up-left" data-aos-duration="500">
+        <img src="./resources/images/offcampus.jpg" />
+        <div class="notes">
+          <h3>Off Campus Drive</h3>
+          <p>
+            Hurry!!<br />
+            click on below button to view off campur recruitment drives
+          </p>
+          <a href="#" class="b1">Click Me!</a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="footer-content">
+      <h3>Together✌️Succeed</h3>
+      <p>TogetherVSucceed is a website which will prepare you for your interviews and will definitely help you in achieving your goals.
+        All the best for your upcoming interviews!!</p>
+     
+  </div>
+  <div class="footer-bottom">
+      <p>copyright &copy <a href="#">Together✌️Succeed</a>  </p>
+
+  </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    <script>
+      let userData = JSON.parse(localStorage.getItem("userData"));
+      let userName = document.getElementById("userName");
+      let name = userData.fname + " " + userData.lname;
+      userName.innerHTML = name;
+     
+      let logoutButton = document.getElementById("logoutButton");
+      logoutButton.addEventListener("click", function () {
+        localStorage.removeItem("userData");
+        localStorage.removeItem("displayExperience");
+      });
+    </script>
+  </body>
+</html>

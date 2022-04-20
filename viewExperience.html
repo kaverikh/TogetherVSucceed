@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Experience</title>
+  <link rel="icon" type="image/x-icon" href="resources/images/logo.png">
+  <script src="./resources/script/isLoggedIn.js"></script>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 0px;
+      margin: 0px;
+      overflow-x: hidden;
+      background-color: #daf8fa7a;
+       
+    }
+    .top
+{
+  background-image: url(resources/images/job2.png);
+  height:max-content;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.page-title
+{
+  
+  /* background: rgba(0,0,0 ,0.5); */
+  text-align: center;
+  color:black;
+  padding: 50px;
+  font-variant:small-caps;
+  font-size: 70px;
+  font-family: fantasy;
+  letter-spacing: 20px;
+}
+.menu
+{
+  background: #3f7478;
+  text-align: left;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.profile{
+  height: 20px;
+  width: 20px;
+}
+
+.menu-list
+{
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.menu-list li{
+  font-size: 17px;
+  list-style: none;
+  display: inline-block;
+  padding: 25px 25px 26px 25px;
+}
+
+.a-menu
+{
+  text-decoration: none;
+  color: white;
+}
+
+.menu-list li:hover{
+  background: #c9ebee;
+  transform: scaleY(1.1);
+  color: #3f7478;
+}
+
+        .container .link
+        {
+      border: 1px solid black;
+      border-radius: 5px 5px 5px 5px;
+      /* padding: 2px 2px 2px 2px; */
+      color: black;
+      
+  }
+
+    .flip-card-front {
+      color: black;
+      background-image: url("resources/images/design.png");
+      width: 300px;
+      height: 300px;
+      /* perspective: 1000px; */
+      margin: 30px;
+      border: 1px solid black;
+      border-radius: 10px;
+      text-align: center;
+      padding-top: 10px;
+      }
+    table {
+      border-spacing: 60px 60px;
+      margin: 0 auto;
+    }
+
+    .flip-card-front span{
+     /* margin-top: 100px; */
+      font-size: 40px;
+    }
+
+    tr{
+      margin-top: 30px;
+      margin-left: 50px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    button {
+    
+        /* color: white;
+        font-size: 12px;
+        font-weight: bolder;
+        padding: 12px 35px;
+        margin-top: 50px;
+        border: 1px solid #3B6978;
+        border-radius: 50px;
+        text-transform: uppercase; 
+       background-color: #3f7478; */
+
+       font-weight: bolder;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-size: 12px;
+        letter-spacing: 4px;
+        position: relative;
+        margin-top: 50px;
+        background-color: #3f7478;
+        border: none;
+        color: white;
+        padding: 6px;
+        width: 125px;
+        height: 25px;
+        text-align: center;
+        transition-duration: 0.4s;
+        overflow: hidden;
+        box-shadow: 0 5px 15px #19304773;
+        border-radius: 4px;
+        
+}
+
+
+.footer-content{
+  position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #3c7d82;
+    height: auto;
+    width: 100vw;
+
+    padding-top: 40px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+.footer-bottom{
+    background: #3c7d82;
+    width: 97vw;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.footer-bottom p{
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: white;
+}
+.footer-bottom p a{
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+  </style>
+
+<body>
+  <div class="top">
+    <!-- <img src="./resources/images/experience.jpg" height="250px" width="100%">  -->
+          <div class="page-title">Experience is the teacher of all things</div>
+</div>
+          <!-- Navbar items -->
+          <div class="menu" id="sticky">
+            <ul class="menu-list">
+                <a href="./dashboard.html" class="a-menu"><li>Home</li></a>
+                <a href="./addexperience.html" class="a-menu"><li>Add Experience</li></a>
+                <a href="./practicepaper.html" class="a-menu"><li>Practice Paper</li></a>
+                <a href="./resources.html" class="a-menu"><li>Resources</li></a>
+                <a href="./offcampus.html" class="a-menu"><li>Off Campus</li></a>
+                <a id="logoutButton" class="a-menu" href="index.html"><li>Logout</li></a>
+                <a href="profile.html" class="a-menu"><li><img src="./resources/images/profile.png" class="profile"></li></a>
+             
+            </ul>
+        </div>
+
+  <table >
+    <!-- <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr> -->
+    
+    <tr id="companyCards">
+      
+    </tr>
+  </table>
+  </div>
+  <div class="footer-content">
+    <h3>Together✌️Succeed</h3>
+    <p>TogetherVSucceed is a website which will prepare you for your interviews and will definitely help you in achieving your goals.
+      All the best for your upcoming interviews!!</p>
+   
+</div>
+<div class="footer-bottom">
+    <p>copyright &copy <a href="#">Together✌️Succeed</a>  </p>
+
+</div>
+  <script src="./resources/script/viewExperience.js"></script>
+  <script>
+    let logoutButton = document.getElementById("logoutButton");
+    logoutButton.addEventListener("click", function () {
+      localStorage.removeItem("userData");
+      localStorage.removeItem("displayExperience");
+    });
+  </script>
+</body>
+
+</html>

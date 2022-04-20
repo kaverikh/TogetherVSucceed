@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Profile</title>
+    <link rel="icon" type="image/x-icon" href="resources/images/logo.png">
+        <style>
+            *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile{
+    background: #05595B;
+    text-align: center;
+    padding: 40px 90px;
+    color:#fff;
+    border-radius: 20px;
+    
+}
+
+.profile h1{
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+}
+
+.profile h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.profile label{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.wave {
+  animation-name: wave-hand;  
+  animation-duration: 2s;      
+  animation-iteration-count: infinite;  
+  display: inline-block;
+  font-size: 35px;
+}
+
+@keyframes wave-hand {
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(-10deg);
+    }
+    20%{
+        transform: rotate(12deg);
+    }
+    30%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.profilelogo{
+    width: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 6px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 1%;
+    
+}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="profile">
+                <img src="resources/images/profile2.png" class="profilelogo"><br>
+                <h1>Hello!<span class="wave">👋</span></h1>
+                <h1 id="name"></h1><br>
+                <label>Email id :<h2 id="email"></h2></label><br>
+                <label>Graduation Year :<h2 id="gyear"></h2></label><br>
+                <label>Username :<h2 id="username"></h2></label>
+                
+
+            </div>
+        </div>
+    </body>
+
+    <script>
+        let userData = JSON.parse(localStorage.getItem("userData"));
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let gyear = document.getElementById("gyear");
+        let username = document.getElementById("username");
+        let uname = userData.fname + " " + userData.lname;
+        let uemail = userData.email;
+        let ugyear = userData.gyear;
+        let username1 = userData.username
+        name.innerHTML = uname;
+        email.innerHTML = uemail;
+        gyear.innerHTML = ugyear;
+        username.innerHTML = username1;
+    </script>
+</html>

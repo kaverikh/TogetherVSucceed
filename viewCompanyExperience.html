@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Company Experience</title>
+  <link rel="icon" type="image/x-icon" href="resources/images/logo.png">
+  <script src="./resources/script/isLoggedIn.js"></script>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 0px;
+     
+    }
+   
+
+    .flip-card {
+      width: 1000px;
+      height: auto;
+      margin: 30px;
+ 
+
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 1000px;
+      height: 100%;
+      text-align: center;
+      /* padding-left: 50px; */
+      padding-top: 10px;
+      padding-bottom: 10px;
+      box-shadow: 0 6px 12px 0 rgb(0, 0, 0);
+      background-image: url(resources/images/Untitled\ design\ \(1\).png);
+     
+      
+    }
+
+    table {
+      border-spacing: 50px 60px;
+      margin: 0 auto;
+    }
+
+    tr{
+      margin-top: -30px;
+      display: flex;
+      flex-direction: column;
+    }
+   
+  </style>
+
+<body>
+  
+
+  <table>
+    <tr>
+      <td></td>
+      <td></td> 
+      <td></td> 
+    </tr>
+    
+    <tr id="companyCards">
+    
+    </tr>
+  </table>
+  </div>
+  <script src="./resources/script/viewCompanyExperience.js"></script>
+  <script>
+    let logoutButton = document.getElementById("logoutButton");
+    logoutButton.addEventListener("click", function () {
+      localStorage.removeItem("userData");
+      localStorage.removeItem("displayExperience");
+    });
+  </script>
+</body>
+
+</html>

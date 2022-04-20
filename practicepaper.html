@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practice paper</title>
+    <link rel="icon" type="image/x-icon" href="resources/images/logo.png">
+    <script src="./resources/script/isLoggedIn.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+        overflow-x: hidden;
+      }
+
+      .top {
+        background-image: url(resources/images/practice\ paper.png);
+        height: max-content;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow-x: hidden;
+      }
+      .page-title {
+        background: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        color: white;
+        padding: 50px;
+        font-variant: small-caps;
+        font-size: 100px;
+        font-family: fantasy;
+        letter-spacing: 20px;
+      }
+      /* styling navlist */
+      .menu
+{
+  background: #3f7478;
+  text-align: left;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.profile{
+  height: 20px;
+  width: 20px;
+}
+
+.menu-list
+{
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.menu-list li{
+  font-size: 17px;
+  list-style: none;
+  display: inline-block;
+  padding: 25px 25px 26px 25px;
+}
+
+.a-menu
+{
+  text-decoration: none;
+  color: white;
+}
+
+.menu-list li:hover{
+  background: #c9ebee;
+  transform: scaleY(1.1);
+  color: #3f7478;
+}
+      .container {
+        margin: 70px 50px 50px 10px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .categories {
+        width: max-content;
+        margin: 25px;
+        border: 1px solid #6998ab;
+        border-radius: 20px 20px 20px 20px;
+        display: inline-block;
+      }
+
+      .categories:hover {
+        box-shadow: 0 0 10px 3px #0000008a;
+      }
+
+      .items-img {
+        height: 200px;
+        width: 250px;
+        border-radius: 0 0 50px 50px;
+        padding: 10px;
+      }
+
+      .image-title {
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+      }
+
+      a {
+        text-decoration: none;
+      }
+      .button {
+        font-weight: bolder;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-size: 10px;
+        letter-spacing: 4px;
+        position: relative;
+        background-color: #3f7478;
+        border: none;
+        color: white;
+        padding: 6px;
+        width: 100px;
+        text-align: center;
+        transition-duration: 0.4s;
+        overflow: hidden;
+        box-shadow: 0 5px 15px #19304773;
+        border-radius: 4px;
+      }
+
+      .button:hover {
+        font-weight: bolder;
+        background: #fff;
+        box-shadow: 0px 2px 10px 5px #1abc9ca4;
+        color: #000;
+      }
+
+      .button:after {
+        content: "";
+        background: #1abc9c;
+        display: block;
+        position: absolute;
+        padding-top: 300%;
+        padding-left: 350%;
+        margin-left: -20px !important;
+        margin-top: -120%;
+        opacity: 0;
+        transition: all 0.8s;
+      }
+
+      .button:active:after {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s;
+      }
+
+      .button:focus {
+        outline: 0;
+      }
+
+      table{
+          margin: 0 auto;
+      }
+      
+
+.footer-content{
+  position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #3c7d82;
+    height: auto;
+    width: 100vw;
+
+    padding-top: 40px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+.footer-bottom{
+    background: #3c7d82;
+    width: 100vw;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.footer-bottom p{
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: white;
+}
+.footer-bottom p a{
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="page-title">Practice Paper</div>
+    </div>
+    <!-- Navbar items -->
+    <div class="menu" id="sticky">
+      <ul class="menu-list">
+          <a href="./dashboard.html" class="a-menu"><li>Home</li></a>
+          <a href="./viewExperience.html" class="a-menu"><li>View Experience</li></a>
+          <a href="./addexperience.html" class="a-menu"><li>Add Experience</li></a>
+          <a href="./resources.html" class="a-menu"><li>Resource</li></a>
+          <a href="./offcampus.html" class="a-menu"><li>Off Campus</li></a>
+          <a id="logoutButton" class="a-menu" href="index.html"><li>Logout</li></a>
+          <a href="profile.html" class="a-menu"><li><img src="./resources/images/profile.png" class="profile"></li></a>
+       
+      </ul>
+  </div>
+    <div class="container">
+      <table>
+        <tr>
+          <td>
+            <a href="#company">
+              <div class="categories">
+                <img
+                  src="./resources//images/practice paper/accenture.png"
+                  class="items-img"
+                  alt="Cant display"
+                />
+                <div class="image-title">
+                  <a class="link" href="resources/pdf/ACCENTURE.pdf" target="_blank"
+                    ><button class="button">Click Me</button></a
+                  >
+                </div>
+              </div>
+            </a>
+          </td>
+          <td>
+            <a href="#company">
+              <div class="categories">
+                <img
+                  src="./resources/images/practice paper/amazon.jpg"
+                  class="items-img"
+                  alt="Cant display"
+                />
+                <div class="image-title">
+                  <a class="link" href="resources/pdf/AMAZON .pdf" target="_blank"
+                    ><button class="button">Click Me</button></a
+                  >
+                </div>
+              </div>
+            </a>
+          </td>
+
+          <td>
+            <a href="#company">
+              <div class="categories">
+                <img
+                  src="./resources/images/practice paper/cisco.png"
+                  class="items-img"
+                  alt="Cant display"
+                />
+                <div class="image-title">
+                  <a class="link" href="resources/pdf/CISCO.pdf" target="_blank"
+                    ><button class="button">Click Me</button></a
+                  >
+                </div>
+              </div>
+            </a>
+          </td>
+          <td>
+            <a href="#company">
+              <div class="categories">
+                <img
+                  src="./resources/images/practice paper/Deloitte_Logo.jpg"
+                  class="items-img"
+                  alt="Cant display"
+                />
+                <div class="image-title">
+                  <a class="link" href="resources/pdf/DELOITTE.pdf" target="_blank"
+                    ><button class="button">Click Me</button></a
+                  >
+                </div>
+              </div>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#company">
+              <div class="categories">
+                <img
+                  src="./resources/images/practice paper/flipkart.png" target="_blank"
+                  class="items-img"
+                  alt="Cant display"
+                />
+                <div class="image-title">
+                  <a class="link" href="resources/pdf/FLIPKART .pdf"
+                    ><button class="button">Click Me</button></a
+                  >
+                </div>
+              </div>
+            </a>
+          </td>
+          <td>
+            <a href="#company">
+              <div class="categories">
+                <img
+                  src="./resources/images/practice paper/goldman.png"
+                  class="items-img"
+                  alt="Cant display"
+                />
+                <div class="image-title">
+                  <a class="link" href="resources/pdf/GOLDMAN SACS.pdf" target="_blank"
+                    ><button class="button">Click Me</button></a
+                  >
+                </div>
+              </div>
+            </a>
+          </td>
+          <td>
+            <a href="#company">
+              <div class="categories">
+                <img
+                  src="./resources/images/practice paper/infosys.png"
+                  class="items-img"
+                  alt="Cant display"
+                />
+                <div class="image-title">
+                  <a class="link" href="resources/pdf/INFOSYS .pdf" target="_blank"
+                    ><button class="button">Click Me</button></a
+                  >
+                </div>
+              </div>
+            </a>
+          </td>
+          <td>
+            <a href="#compnay">
+              <div class="categories">
+                <img
+                  src="./resources/images/practice paper/myntra.png"
+                  class="items-img"
+                  alt="Cant display"
+                />
+                <div class="image-title">
+                  <a class="link" href="resources/pdf/MYNTRA.pdf" target="_blank"
+                    ><button class="button">Click Me</button></a
+                  >
+                </div>
+              </div>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#company">
+              <div class="categories">
+                <img
+                  src="./resources/images/practice paper/oracle.png"
+                  class="items-img"
+                  alt="Cant display"
+                />
+                <div class="image-title">
+                  <a class="link" href="resources/pdf/ORACLE.pdf" target="_blank"
+                    ><button class="button">Click Me</button></a
+                  >
+                </div>
+              </div>
+            </a>
+          </td>
+          <td>
+            <a href="#company">
+              <div class="categories">
+                <img
+                  src="./resources/images/practice paper/paytm.png"
+                  class="items-img"
+                  alt="Cat display"
+                />
+                <div class="image-title">
+                  <a class="link" href="resources/pdf/PAYTM.pdf" target="_blank"
+                    ><button class="button">Click Me</button></a
+                  >
+                </div>
+              </div>
+            </a>
+          </td>
+          <td>
+            <a href="#company">
+              <div class="categories">
+                <img
+                  src="./resources/images/practice paper/visa.png"
+                  class="items-img"
+                  alt="Cant display"
+                />
+                <div class="image-title">
+                  <a class="link" href="resources/pdf/VISA.pdf" target="_blank"
+                    ><button class="button">Click Me</button></a
+                  >
+                </div>
+              </div>
+            </a>
+          </td>
+          <td>
+            <a href="#company">
+              <div class="categories">
+                <img
+                  src="./resources/images/practice paper/walmart.jpg"
+                  class="items-img"
+                  alt="Cant display"
+                />
+                <div class="image-title">
+                  <a class="link" href="resources/pdf/WALMART.pdf" target="_blank"
+                    ><button class="button">Click Me</button></a
+                  >
+                </div>
+              </div>
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="footer-content">
+      <h3>Together✌️Succeed</h3>
+      <p>TogetherVSucceed is a website which will prepare you for your interviews and will definitely help you in achieving your goals.
+        All the best for your upcoming interviews!!</p>
+     
+  </div>
+  <div class="footer-bottom">
+      <p>copyright &copy <a href="#">Together✌️Succeed</a>  </p>
+
+  </div>
+    <script>
+      let logoutButton = document.getElementById("logoutButton");
+      logoutButton.addEventListener("click", function () {
+        localStorage.removeItem("userData");
+        localStorage.removeItem("displayExperience");
+      });
+    </script>
+  </body>
+</html>

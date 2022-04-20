@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/dd8c49730d.js" crossorigin="anonymous"></script>
+  
+  <title>Registration & Login</title>
+  <link rel="icon" type="image/x-icon" href="resources/images/logo.png">
+  <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+body {
+  
+  background-color: #6998AB;
+  color: #6998AB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background-image: url(4.jpg); */
+  background-size: cover;
+  
+  
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Roboto", sans-serif;
+}
+
+
+
+p {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: #204051;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+.container {
+  /* background-image: url(image/experience/contact.png); */
+  position: absolute;
+  /* box-shadow: 2.8px 2.8px 2.2px #05050594, 8px 9px 9px #00000017, 9px 10px 10px #00000017, 7px 9px 11px #00000017, 7px 7px 2px #00000017, 6px 11px 13px #000; */
+  overflow: hidden;
+  min-height: 500px;
+  width: 768px;
+  max-width: 100%;
+  opacity: 100%;
+}
+
+.form-container {
+  background: #CAE8D5;
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+.form-container input {
+  background: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+button {
+  color: #111;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 35px;
+  margin-top: 15px;
+  border: 1px solid #6998AB;
+  border-radius: 20px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 300px;
+  text-align: center;
+  background: transparent;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 200px;
+  padding: 3px 0;
+  transition: border 0.5s;
+  outline: none;
+  color: black;
+  font-weight: bold;
+}
+
+.border-red{
+  border-bottom: 1px solid red;
+}
+
+.border-blue{
+  border-bottom: 1px solid #fff;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+.ghost {
+  background: transparent;
+  border-color: #6998AB;
+  background-color: #64a6e1;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+.sign-in-container h1{
+  
+  margin-bottom: 30px;
+}
+
+.sign-in-container {
+  width: 50%;
+  z-index: 2;
+  left: 0;
+}
+
+
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  z-index: 0;
+  opacity: 100%;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.overlay {
+  background: transparent;
+  background: linear-gradient(to right, #ff4b2b, #ff416c) no repeat 0 0 / cover;
+  color: black;
+  position: absolute;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-panel {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 100%;
+  z-index: 5;
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+  </style>
+</head>
+
+<body>
+    
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form>
+        <h1>Create Account</h1>
+
+        <input id="lname" class="border-blue" type="text" name="lname" required name="name" placeholder="First Name">
+        <input id="lname" class="border-blue" type="text" name="lname" required name="name" placeholder="Last Name">
+        <input id="username" class="border-blue" type="text" name="username" required name="name" placeholder="User Name">
+        <input id="email" class="border-blue" type="email" placeholder="abc@gmail.com" />
+        <!-- <input type="email" id="email" pattern=".+@globex\.com" size="30" required placeholder="abc@gmail.com"> -->
+
+        <input id="password" class="border-blue" type="password" placeholder="Password" /> 
+        <input id="cpassword" class="border-blue" type="password" placeholder="Confirm Password" /> 
+        <input id="gyear" class="border-blue" type="text" placeholder="Graduation year"/> 
+        <button id="registerButton">Sign Up</button>
+        <button id="resetButton">Reset</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form>
+        <h1>Sign In</h1>
+
+        <input id="userEmail" type="text" name="email" required name="name" placeholder="Email"> 
+        <!-- <input type="email" id="email" pattern=".+@globex\.com" size="30" required placeholder="Email"> -->
+        <input id="userPassword" type="password" placeholder="Password" /> 
+        <button id="loginButton">Sign In</button>
+        <button id="resetButton">Reset</button>
+      </form>
+    </div>
+
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back</h1>
+          <p> If you already have account please login to get to know your senior's interview experiences!!</p>
+          <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hello Friend</h1>
+          <p>Don't have account ? Please sign up with your personal details to share your experiences! </p>
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+    <script src="./resources/script/script.js"></script>
+    <script>
+        const signUpButton = document.getElementById("signUp");
+const signInButton = document.getElementById("signIn");
+const container = document.getElementById("container");
+
+signUpButton.addEventListener("click", () => {
+  container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener("click", () => {
+  container.classList.remove("right-panel-active");
+});
+    </script>
+    <script>
+
+      let logoutButton = document.getElementById("logoutButton");
+      logoutButton.addEventListener("click", function () {
+        localStorage.removeItem("userData");
+        localStorage.removeItem("displayExperience");
+      });
+
+    </script>
+</body>
+
+</html>
